@@ -25,11 +25,27 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4ad6aabe-d770-4d3c-a390-09337f6cffd5" name="Default Changelist" comment="" />
+    <list default="true" id="4ad6aabe-d770-4d3c-a390-09337f6cffd5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/TableProductRow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fields/Field.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/fields/Select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/productsApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ProductForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ProductForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/TableProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/TableProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
@@ -39,17 +55,39 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="ProjectId" id="1hbRfXJOKM45cowhRjvGksl8M2X" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../test" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="yarn" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src" />
+    </key>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -65,6 +103,10 @@
       <workItem from="1600449326713" duration="382000" />
       <workItem from="1600585997599" duration="11000" />
       <workItem from="1600586059167" duration="143000" />
+      <workItem from="1600588139903" duration="10179000" />
+      <workItem from="1601404114227" duration="7000" />
+      <workItem from="1601763201578" duration="31000" />
+      <workItem from="1601763267764" duration="56000" />
     </task>
     <servers />
   </component>
@@ -95,15 +137,34 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="801" y="401" width="307" height="234" key="#ESLint" timestamp="1601763323325">
+      <screen x="0" y="27" width="1920" height="985" />
+    </state>
+    <state x="801" y="401" width="307" height="234" key="#ESLint/0.27.1920.985@0.27.1920.985" timestamp="1601763323325" />
+    <state x="654" y="208" width="611" height="629" key="#JavaScript" timestamp="1600586726315">
+      <screen x="0" y="25" width="1920" height="990" />
+    </state>
+    <state x="654" y="208" width="611" height="629" key="#JavaScript/0.25.1920.990@0.25.1920.990" timestamp="1600586726315" />
     <state x="829" y="388" width="669" height="455" key="#Notifications" timestamp="1600586008184">
       <screen x="0" y="25" width="1920" height="990" />
     </state>
     <state x="829" y="388" width="669" height="455" key="#Notifications/0.25.1920.990@0.25.1920.990" timestamp="1600586008184" />
-    <state x="743" y="278" width="424" height="490" key="FileChooserDialogImpl" timestamp="1600586200378">
+    <state x="629" y="312" width="652" height="422" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1600589739164">
       <screen x="0" y="25" width="1920" height="990" />
     </state>
-    <state x="743" y="278" width="424" height="490" key="FileChooserDialogImpl/0.25.1920.990@0.25.1920.990" timestamp="1600586200378" />
+    <state x="629" y="312" width="652" height="422" key="#com.intellij.fileTypes.FileTypeChooser/0.25.1920.990@0.25.1920.990" timestamp="1600589739164" />
+    <state x="693" y="269" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1600596046644">
+      <screen x="0" y="25" width="1920" height="990" />
+    </state>
+    <state x="693" y="269" width="524" height="508" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.25.1920.990@0.25.1920.990" timestamp="1600596046644" />
+    <state x="743" y="278" width="424" height="490" key="FileChooserDialogImpl" timestamp="1601404119570">
+      <screen x="0" y="25" width="1920" height="990" />
+    </state>
+    <state x="743" y="278" width="424" height="490" key="FileChooserDialogImpl/0.25.1920.990@0.25.1920.990" timestamp="1601404119570" />
     <state width="1897" height="242" key="GridCell.Tab.0.bottom" timestamp="1600277960188">
       <screen x="0" y="25" width="1920" height="990" />
     </state>
@@ -120,6 +181,10 @@
       <screen x="0" y="25" width="1920" height="990" />
     </state>
     <state width="1897" height="242" key="GridCell.Tab.0.right/0.25.1920.990@0.25.1920.990" timestamp="1600277960186" />
+    <state x="543" y="257" width="824" height="532" key="IDE.errors.dialog" timestamp="1600588175830">
+      <screen x="0" y="25" width="1920" height="990" />
+    </state>
+    <state x="543" y="257" width="824" height="532" key="IDE.errors.dialog/0.25.1920.990@0.25.1920.990" timestamp="1600588175830" />
     <state x="555" y="242" width="800" height="562" key="Vcs.Push.Dialog.v2" timestamp="1600278325551">
       <screen x="0" y="25" width="1920" height="990" />
     </state>

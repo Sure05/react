@@ -1,26 +1,105 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component, Fragment } from 'react';
+import { Loader, Grid } from 'semantic-ui-react';
+import TableProducts from "./components/TableProducts";
+import ProductForm from "./components/ProductForm";
+import productsApi from './productsApi';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import 'semantic-ui-css/semantic.min.css';
+
+
+class App extends Component {
+	state = {
+		categoriesList: [
+			{
+				id: 1,
+				name: 'Phone'
+			},
+			{
+				id: 2,
+				name: 'Tabled'
+			},
+			{
+				id: 3,
+				name: 'Notebook'
+			},
+		],
+		products: [],
+		product: {},
+		isFetching: false,
+	};
+
+	removeProduct = id => {
+		const { products } = this.state;
+		this.setState({
+			products: products.filter(product => product.id !== id),
+			product: {}
+		})
+	};
+	editProduct = updatedProduct => {
+		const {products} = this.state;
+		products.forEach(itemList => {
+			if(itemList.id ===  updatedProduct)
+				this.setState({product: itemList})
+		})
+	};
+
+	saveProduct = (product) => {
+		const {products} = this.state;
+		let newProductList = [...products];
+		if(!product.hasOwnProperty('id')){
+			let length = products.length;
+			product.id = length > 0 ? products[length - 1].id + 1 : 1;
+			newProductList.push(product)
+		} else {
+			newProductList.forEach((itemList, index) => {
+				if(itemList.id ===  product.id)
+					newProductList[index] = product
+			})
+		}
+		this.setState({
+			products: newProductList,
+			product: {}
+		})
+	}
+
+	componentDidMount() {
+		this.setState({ isFetching: true });
+		productsApi
+			.fetchProducts()
+			.then(products => {
+				this.setState({ products, isFetching: false })
+			})
+	}
+
+	render() {
+		return (
+			<Fragment>
+				<Loader size="small" active={this.state.isFetching} />
+				{
+					!this.state.isFetching ?
+						<Grid columns={2}>
+							<Grid.Column width={8}>
+								<TableProducts
+									//
+									onEditProduct={this.editProduct}
+									onRemoveProduct={this.removeProduct}
+									categoriesList={this.state.categoriesList}
+									products={this.state.products}
+								/>
+							</Grid.Column>
+							<Grid.Column width={5}>
+								<ProductForm
+									onAddProduct={this.saveProduct}
+									product={this.state.product}
+									categoriesList={this.state.categoriesList}
+								/>
+							</Grid.Column>
+						</Grid>
+					: ''
+				}
+			</Fragment>
+		);
+	}
 }
 
 export default App;
