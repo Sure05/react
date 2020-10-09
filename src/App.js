@@ -1,34 +1,37 @@
 import React, {Fragment, useState} from 'react';
-import GlideComponent from "./components/GlideComponent";
+import SplideComponent from "./components/SplideComponent";
 
-import Form from "semantic-ui-react/dist/commonjs/collections/Form";
-import Radio from "semantic-ui-react/dist/commonjs/addons/Radio";
+import {Form, Grid, Radio, Select} from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
-    const [type, setType] = useState('slider');
+    const [options, setOptions] = useState({
+        autoplay: true,
+        type: 'slide'
+    });
     return (
         <Fragment>
+            <Grid.Column key={4}>
             <Form>
                 <Form.Field>
-                    <Radio
-                        label='Type slider'
-                        name='radioGroup'
-                        value='slider'
-                        checked={type === 'slider'}
-                        onChange={() => setType('slider')}
-                    />
-                </Form.Field>
-                <Form.Field>
-                    <Radio
-                        label='Type carousel'
-                        name='radioGroup'
-                        value='carousel'
-                        checked={type === 'carousel'}
-                        onChange={() => setType('carousel')}
-                    />
+                   <Select placeholder={'effect'}
+                           onChange={(e, {value}) => {
+                               setOptions({
+                                   ...options,
+                                   type: value
+                               })
+                           }}
+                           options={[
+                       { key: 'slide', value: 'slide', text: 'slide' },
+                       { key: 'loop', value: 'loop', text: 'loop' },
+                       { key: 'fade', value: 'fade', text: 'fade' },
+                   ]}/>
                 </Form.Field>
             </Form>
-            <GlideComponent type={type} />
+            </Grid.Column>
+            <Grid.Column key={8}>
+            <SplideComponent options={options} />
+            </Grid.Column>
         </Fragment>
     );
 }
